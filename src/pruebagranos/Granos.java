@@ -7,6 +7,7 @@ package pruebagranos;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -18,7 +19,9 @@ public class Granos extends javax.swing.JFrame {
      * Creates new form Granos
      */
     public Granos() {
+        
         initComponents();
+        setIconImage(new ImageIcon(getClass().getResource("caraRodolfprueba.png")).getImage());
             Thread th = new Thread(granosSimulator1);
             th.setDaemon(true);
             th.start();
